@@ -1,0 +1,89 @@
+:root{
+    --roboto:'Roboto', sans-serif;
+    --robotoC: 'Roboto Condensed', sans-serif;
+    --primary-color: #1B90FC;
+    --secondary-color: #202020 ;
+
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: var(--roboto);
+}
+
+.wrapper{
+    max-inline-size: 1664px;
+    margin: auto;
+}
+
+p, h1{
+    margin: 0;
+}
+
+.hero h1{
+    font-family: var(--robotoC);
+    font-size: 40px;
+    margin-block-end: 8px;
+}
+
+.hero p{
+    font-size: 16px;
+    line-height: 24px;
+    margin-block-end: 24px;
+}
+
+img{
+    max-inline-size: 100%;
+}
+
+button{
+    padding: 16px 32px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 16px;
+}
+
+
+.hero-content{
+    block-size: 768px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    
+}
+
+.card{
+    max-inline-size: 412px;
+    color: white;
+    z-index: 2;
+    position: relative;
+}
+
+
+.hero::before{
+    content: '';
+    inline-size: 50%;
+    display: block;
+    background-color: var(--secondary-color);
+    position: absolute;
+    inset-block: 0;
+    z-index: 1;
+    clip-path: polygon(0 0, calc(100% - 151px) 0, 100% 100%, 0 100%);
+}
+
+.hero{
+    background-color: black;
+    background-image: url('../src/img.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 128px), 0 100%);
+}
