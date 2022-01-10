@@ -64,6 +64,7 @@ button{
     color: white;
     z-index: 2;
     position: relative;
+    margin-left: 2rem;
 }
 
 
@@ -85,5 +86,48 @@ button{
     background-size: cover;
     background-position: center;
     position: relative;
-    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 128px), 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 15%), 0 100%);
+}
+
+@media (max-width:768px) {
+    button{
+        color: lightgreen;
+    }
+    
+    .hero::before{
+        content: '';
+        inline-size: 100%;
+        block-size: 550px;
+        inset-block: 0;
+        z-index: 1;
+        clip-path: none;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url('../src/img.png');
+    }
+
+    .hero-content{   
+        block-size: 1000px;
+        flex-direction: column-reverse;
+    }
+    .hero{
+        background-color: var(--secondary-color);
+        clip-path: polygon(0 0, 100% 0,100% 95%, 0 100%);
+        background-image: none;
+        
+    }
+    
+    .card{
+        max-inline-size: 650px;
+        margin-left: 0;
+        margin-right: 0rem;
+        margin-bottom: 6rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    img{
+        max-inline-size: 200px;
+    }
 }
