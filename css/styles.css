@@ -64,7 +64,7 @@ button{
     color: white;
     z-index: 2;
     position: relative;
-    margin-left: 2rem;
+    margin-left: 3rem;
 }
 
 
@@ -91,12 +91,12 @@ button{
 
 @media (max-width:768px) {
     button{
-        color: lightgreen;
+
     }
     
     .hero::before{
         content: '';
-        inline-size: 100%;
+        inline-size: 100vw;
         block-size: 550px;
         inset-block: 0;
         z-index: 1;
@@ -129,5 +129,24 @@ button{
 
     img{
         max-inline-size: 200px;
+    }
+}
+
+@media (max-width:414px) {
+    .hero::before{
+        background-size: cover;
+        inline-size: 100vw;
+        block-size: 300px;
+
+    }
+    .hero-content{
+        block-size: 700px;
+    }
+
+    .card{
+        max-inline-size: 90%;
+    }
+    img{
+        inline-size: 120px;
     }
 }
